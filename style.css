@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background-image: linear-gradient(to right, rgba(230, 230, 230, 0.6), rgba(230, 230, 230, 0.6)), url(https://images.pexels.com/photos/7009483/pexels-photo-7009483.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-7009483.jpg&fm=jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    width: 50%;
+    margin: 3rem auto;
+    position: relative;
+    padding: 2rem;
+    font-size: 1.6rem;
+
+}
+header{
+    text-align: center;
+    margin: 1rem;
+    line-height: 4rem;
+    position: sticky;
+    top: 0;
+    left:auto;
+    
+    z-index: 1000;
+    padding: 1rem;
+    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.808)); */
+    backdrop-filter: blur(2rem);
+}
+#title{
+    font-size: 3rem;
+}
+#description{
+    font-size: 1.5rem;
+    color: rgb(91, 20, 20);
+}
+#survey-form{
+    position: relative;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(.5rem);
+
+}
+#survey-form > *{
+    margin: .7rem;
+}
+
+
+#name, #city, #dob, #phone, #city{
+    width: 98%;
+    height: 3rem;
+    border: 2px solid transparent;
+    background-color: rgb(111, 111, 111);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    color: rgb(255, 255, 255);
+}
+#name, #phone, #dob {
+    max-width: 95%;
+}
+#name:hover, #phone:hover, #dob:hover{
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#address{
+    width: 98%;
+    max-width: 98%;
+    min-width: 98%;
+    min-height: 10rem;
+}
+
+label{
+    cursor: pointer;
+}
+
+fieldset{
+    padding: 1rem;
+
+}
+[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.radio-label {
+  display: block;
+  position: relative;
+  padding-left: 3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: -1rem;
+}
+.radio-mark{
+    position:absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgb(133, 117, 117);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+ .radio-label:hover .radio-mark{
+    box-shadow: 0rem 0rem 0rem .3rem rgba(155, 64, 64, 0.51);
+}
+.radio-mark::after{
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background: #fff;
+    display: none;
+}
+ [type="radio"]:checked ~ .radio-mark::after{
+    display: block;
+}
+
+
+[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.check-label {
+  display: block;
+  position: relative;
+  padding-left: 3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: -1rem;
+}
+.check-mark{
+    position:absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: rgb(133, 117, 117);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+ .check-label:hover .check-mark{
+    box-shadow: 0rem 0rem 0rem .3rem rgba(155, 64, 64, 0.51);
+}
+.check-mark::after{
+    content: '\002714';
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(15deg);
+    display: none;
+}
+ [type="checkbox"]:checked ~ .check-mark::after{
+    display: block;
+}
+#submit,#reset{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.6rem;
+
+}
+#submit:hover ,#reset:hover {
+        box-shadow: 0rem 0rem 0rem .3rem rgba(155, 64, 64, 0.51);
+
+}
+input::placeholder{
+    color: #fff;
+}
+
+
+
