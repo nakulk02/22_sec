@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+
+}
+.container > div{
+    padding: 10px;
+}
+.rem{
+    font-size: 2rem;
+}
+
+.em{
+    font-size: 2em;
+}
+
+.px{
+    font-size: 20px;
+}
+
+.vh{
+    font-size: 2vh;
+}
+
+.vw{
+    font-size: 2vw;
+}
+
+
+.child > div{
+
+    color: blue;
+    font-size: 20px;
+}
+.upper ~ p{
+    text-transform: uppercase;
+}
+.line + p{
+    text-decoration: underline;
+}
+
+.rotate{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    transform: rotate(180deg);
+}
+
+.move{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    transform: translatex(0px);
+    transition: transform 1s;
+}
+
+.move:hover{
+    transform: translateX(50px);
+}
